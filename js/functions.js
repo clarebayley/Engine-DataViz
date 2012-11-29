@@ -176,10 +176,10 @@ var firstGuess = true;
 var guessListener;
 //var infoWindow;
 
-var pinImage = "/techjobs/images/pin.png";
-var pinImageGrey = "/techjobs/images/pin_grey.png";
-var pinImageTrans = "/techjobs/images/pin_grey_trans.png";
-var pinShadow = new google.maps.MarkerImage("/techjobs/images/shadow.png",
+var pinImage = "/Engine-DataViz/images/pin.png";
+var pinImageGrey = "/Engine-DataViz/images/pin_grey.png";
+var pinImageTrans = "/Engine-DataViz/images/pin_grey_trans.png";
+var pinShadow = new google.maps.MarkerImage("/Engine-DataViz/images/shadow.png",
 					new google.maps.Size(27, 37),
 					new google.maps.Point(0,0),
 					new google.maps.Point(3, 37));
