@@ -1,0 +1,416 @@
+.rounded-corners (@radius: 5px) {border-radius: @radius; -webkit-border-radius: @radius;-moz-border-radius: @radius;}
+.box-shadow (@h, @v, @b, @c){box-shadow: @h + 0px @v + 0px @b + 0px @c;-webkit-box-shadow: @h + 0px @v + 0px @b + 0px @c;-moz-box-shadow:    @h + 0px @v + 0px @b + 0px @c;}
+.b{border: 1px solid #000;}
+a{text-decoration: none;color: inherit;}
+.clear{float: none;clear: both;}
+body{margin: auto;word-wrap: break-word;}
+
+@orange: #e87d3c;
+@grey: #777;
+
+body{
+	background: #ccc url('/techjobs/images/bg-gray.png') repeat center top;
+	font-family: asap;
+	font-size: 16px;
+	color: @grey;
+}
+
+h1{
+	color: @orange;
+	font-size: 44px;
+}
+
+sup{
+	font-size: xx-small;
+	vertical-align: top;	
+}
+
+.nslasha{
+	font-size: 23px;
+	color: #CCC;
+}
+
+.container{
+	width: 900px;
+	margin: auto;
+}
+
+.btn{
+	background-color: @orange;
+	color: #fff;
+	padding: 10px 20px;
+	.rounded-corners;
+	.box-shadow(1,1,5,#999);
+	cursor: pointer;
+	
+	&:hover{
+		.box-shadow(3,3,5,#999);
+	}
+	
+	&:active{
+		.box-shadow(1,1,5,#999);
+	}
+	
+	&.inactive{
+		background-color: #ccc;
+		.box-shadow(0,0,0,transparent);
+		cursor: default;
+	}
+}
+
+#color-bar{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	height: 2px;
+	position: absolute;
+	top: 0px;
+	z-index: 101;
+}
+
+#engine-logo{
+	max-height: 40px;
+	margin: 20px;
+	float: left;
+	position: absolute;
+	z-index: 101;
+}
+
+#header{
+	background: #ccc url('/techjobs/images/bg-gray.png') repeat center top;
+	position: relative;
+	z-index: 100;
+	height: 170px;
+	padding-top: 50px;
+	
+	em{
+		color: @orange;
+	}
+	
+	.subtext{
+		float: left;
+		margin-top: 30px;
+		font-size: 20px;
+		img{
+			position: relative;
+			top: 12px;
+			left: -12px;
+		}
+	}
+	
+	.btn{
+		margin-top: 25px;
+		float: right;
+	}
+}
+
+.withShadow{
+	.box-shadow(0, 2, 5, #AAA);
+}
+
+#infobox{
+	.withShadow;
+	display: none;
+	background-color: #fff;
+/*	height: 80px;*/
+	z-index: 99;
+	position: relative;
+	
+	.data-display{
+		float: left;
+		width: 110px;
+		padding: 15px;
+		text-align: left;
+		border-right: 1px solid #ccc;
+		.data{
+			display: block;
+			color: #666;
+			font-size: 25px;
+			padding-top: 5px;
+		}
+		.label{
+			color: #888;
+			font-size: 13px;
+		}
+	}
+	
+	#total-growth{
+		border-right-style: none;
+		width: 130px;
+		padding-right: 0px;
+	}
+	
+	#area{
+		padding-left: 0px;
+		width: 300px;
+		.data{
+			padding-top: 5px;
+			padding-bottom: 5px;
+			color: @orange;
+			font-size: 20px;
+		}
+	}
+}
+
+#map-canvas{
+	width: 100%;
+	height: 740px;
+}
+
+#years{
+	float: right;
+}
+
+#quizHeader, #answerHeader, #mapHeader{
+	position: absolute;
+	display: none;
+/*	width: 100%;*/
+}
+
+#instructions{
+	position: absolute;
+	top: 350px;
+	left: 220px;
+	font-size: 25px;
+	padding: 20px 30px 35px;
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, .85);
+	color:  @orange;
+
+	img{
+		position: relative;
+		top: 6px;
+		left: -7px;
+	}
+	
+	#close{
+		position: absolute;
+		left: 400px;
+		top: 10px;
+	}
+}
+
+#answerHeader{
+	.subtext{
+		width: 560px;
+		line-height: 27px;
+		margin-top: 20px;
+		margin-left: 7px;
+	}
+	
+	#subtext2{
+		float: right;
+		width: 280px;
+		font-size: 14px;
+		line-height: 18px;
+		margin-top: 25px;
+	}
+	
+	#showMap{
+		position: absolute;
+		top: 350px;
+		left: 300px;
+		font-size: 25px;
+		padding: 20px 30px;
+	}
+	
+	#answerNumber{
+		font-weight: bold;
+	}
+	
+}
+
+#mapHeader{
+
+	width: inherit;
+	
+	h1{
+		float: left;
+	}
+	
+	.subtext{
+		width: 300px;
+		font-size: 15px;
+		line-height: 20px;
+		margin-top: 23px;
+	}
+	
+	#sliderContainer{
+		float: right;
+		padding-top: 40px;
+	}
+	
+	#slider{
+		margin-top: 30px;
+		width: 496px;
+		height: 15px;
+		background: transparent url('/techjobs/images/year_bg.png') no-repeat center top;
+		border-style: none;
+		.ui-slider-handle{
+			background: transparent url('/techjobs/images/slider_handle.png') no-repeat center top;
+			width: 14px;
+			height: 25px;
+			border-style: none;
+			margin-top: 0px;
+			.box-shadow(1,1,2,#999);
+			cursor: pointer;
+
+			&.ui-state-focus{
+				outline-style: none;
+			}
+		}
+	}
+	
+	#sliderLabels{
+		margin-left: -16px;
+		li{
+			color: #999;
+			font-size: 16px;
+			float: left;
+			margin-right: 19px;
+			
+			&.active{
+				color: @orange;
+				font-weight: bold;
+			}
+		}
+	}
+	
+	#areaBtns{
+		.rounded-corners;
+		/*background-color: #ccc;*/
+		background-image: url('https://s3.amazonaws.com/engine-advocacy/startupact/button_bg.png');
+		background-repeat: repeat;
+		float: right;
+		/*width: 200px;*/
+		padding: 4px;
+		color: #ccc;
+		margin-top: 5px;
+/*		margin-right: 25px;*/
+		.box-shadow(1,1,5,#999);
+		font-size: 15px;
+		
+		&:hover{
+			.box-shadow(3,3,5,#999);
+		}
+		
+		&:active{
+			.box-shadow(1,1,5,#999);
+		}
+		
+		div{
+			float: left;
+			padding: 6px 8px;
+			cursor: pointer;
+			
+			&.active{
+				color: @orange;
+			}
+		}
+		#countyBtn{
+			border-right: 1px solid #ccc;
+			/*margin-left: 10px;*/
+		}
+	}
+	
+}
+
+#footer{
+/*	height: 300px;*/
+	padding-top: 30px;
+	padding-bottom: 50px;
+	.box-shadow(0, -2, 5, #AAA);
+	position: relative;
+	z-index: 100;
+	
+	background: transparent url('/techjobs/images/bg_logo.png') no-repeat center top;
+	
+	#legend{
+		display: none;
+		position: absolute;
+		top: -100px;
+		left: 10px;
+	}
+	
+	#bac-logo{
+		max-width: 140px;
+	}
+	
+	#partners, #partners-logo{
+		float: right;
+		color: #999;
+		font-size: 14px;
+		padding-right: 40px;
+	}
+	
+	#partners{
+		padding-top: 28px;
+		padding-right: 10px;
+	}
+
+	.tiny{
+		font-size: 11px;
+		line-height: 13px;
+		color: #555;
+	}
+	
+	#asterisk{
+		.tiny;
+		float: left;
+		display: none;
+		width: 280px;
+		padding-left: 25px;
+	}	
+	
+	#asterisk2{
+		.tiny;
+		float: left;
+		display: none;
+		width: 290px;
+		padding-left: 25px;
+		position: absolute;
+	}	
+	
+	#cite{
+		/*.tiny;*/
+		color: #999;
+		font-size: 12px;
+		position: absolute;
+		top: 130px;
+		padding-left: 25px;
+	}
+
+}
+
+#copy{
+	padding: 15px 30px;
+	background-color: #303030;
+	color: #666;
+	font-size: 14px;
+	
+	
+	#social{
+		/*color: #bebebe;*/
+		font-size: 12px;
+		float: right;
+		div{
+			float: left;
+			margin-left: 15px;
+			img{
+				float: left;
+			}
+		}
+		
+		img{
+			margin-right: 5px;
+		}
+		
+		#facebook{
+			img{
+				position: relative;
+				top: -2px;
+			}
+		}
+	}
+	
+}
